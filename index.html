@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | UTUA</title>
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="icon"
+      href="https://utua.com.br/wp-content/uploads/2019/11/cropped-UTUA-FAVICON-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://utua.com.br/wp-content/uploads/2019/11/cropped-UTUA-FAVICON-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://utua.com.br/wp-content/uploads/2019/11/cropped-UTUA-FAVICON-180x180.png"
+    />
+    <link
+      rel="icon"
+      href="https://utua.com.br/wp-content/uploads/2019/11/cropped-UTUA-FAVICON-32x32.png"
+    />
+  </head>
+  <body>
+    <input type="hidden" id="traking_id" value="" />
+
+    <header class="header">
+      <div class="container">
+        <a href="">
+          <img src="img/utua-new-logo.jpg" alt="" />
+        </a>
+        <div class="menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="">Sobre nós</a>
+              </li>
+              <li>
+                <a href="">Contato</a>
+              </li>
+              <li>
+                <a class="btn" href="">Login / Cadastre-se</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="menu-toggle" style="display: none;">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="info">
+      <div class="container">
+        <div class="title">
+          <h2>Descubra qual é o cartão de crédito ideal para você</h2>
+        </div>
+        <img src="img/creditcards-hero.png" alt="" />
+      </div>
+    </section>
+
+    <main class="main">
+      <div class="container">
+        <img class="img-left" src="img/diversity.png" alt="" />
+        <div class="card">
+          <p>
+            Responda às perguntas abaixo para que nossa tecnologia possa
+            escolher o melhor cartão de crédito para você.
+          </p>
+          <div class="questions">
+            <div class="question">
+              <span class="ball" id="title-ball">1</span>
+              <h2 id="question"></h2>
+            </div>
+            <input type="hidden" id="resp_1" value="" />
+            <input type="hidden" id="resp_2" value="" />
+            <input type="hidden" id="resp_3" value="" />
+
+            <div class="answers"></div>
+          </div>
+          <div class="progress">
+            <div class="st-1"></div>
+            <div class="stage">
+              <!-- <span class="ball">1</span> -->
+              <img src="img/circle.png" alt="" />
+            </div>
+            <div class="stage">
+              <!-- <span class="ball">2</span> -->
+              <img src="img/credit-2.png" alt="" />
+            </div>
+            <div class="stage">
+              <!-- <span class="ball">3</span> -->
+              <img src="img/credit-3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <img class="btn-wpp pulse" src="img/whatsapp.svg" alt="" />
+    <div class="modal">
+      <div class="card-modal">
+        <img src="img/logo-modal.png" alt="" />
+        <h2>FALTA POUCO</h2>
+        <p>Digite seus dados abaixo e receba o cartão perfeito para você</p>
+        <form action="/" onsubmit="submitForm(event, this)">
+          <input
+            type="text"
+            name="name"
+            autofocus
+            required
+            placeholder="Insira seu nome"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Insira seu email"
+          />
+          <input type="submit" value="VER MEU CARTÃO DE CRÉDITO" />
+        </form>
+        <a href="">
+          Ao clicar no botão "ver meu cartão" você concorda com os termos de uso
+          e as políticas de privacidade
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="copy">
+          <img src="img/logo-utua.svg" alt="" />
+          <p>Utua · 2020 © Todos os direitos reservadoss</p>
+        </div>
+        <div class="termos">
+          <a href="">Política de privacidade</a>
+          <a href="">Termos de uso</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/toggle.js"></script>
+    <script>
+      function submitForm(e, form) {
+        e.preventDefault()
+
+        fetch('/', {
+          method: 'post',
+          body: JSON.stringify({
+            name: form.name.value,
+            email: form.email.value,
+          }),
+        })
+          .then(function (response) {
+            return response.json()
+          })
+          .then(function (data) {
+            //Success
+            alert('form submited')
+          })
+          .catch(function (err) {
+            // Only test
+            sendData()
+
+            //Failure
+            // alert('Error')
+          })
+      }
+    </script>
+  </body>
+</html>
