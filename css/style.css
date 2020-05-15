@@ -13,7 +13,7 @@ html {
 html,
 body {
   height: 100vh;
-  font-family: 'Montserrat-Regular';
+  font-family: 'Montserrat-Regular', sans-serif;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -21,9 +21,12 @@ body {
 body {
   font-size: 1.6rem;
 }
+
 a {
   text-decoration: none;
 }
+
+/*======= HEADER =======*/
 .header {
   background: #ffffff;
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
@@ -39,7 +42,6 @@ a {
 }
 
 .header .container img {
-  /* padding: 25px 0; */
   width: 40px;
   height: 50px;
   margin: 10px 0px 10px 0px;
@@ -65,10 +67,9 @@ a {
   text-decoration: none;
   color: black;
   margin-left: 70px;
-  font-family: 'Montserrat-Medium';
+  font-family: 'Montserrat-Medium', sans-serif;
   text-transform: uppercase;
   font-size: 1.4rem;
-  /* padding: 20px; */
   transition: all 250ms linear 0s;
 }
 
@@ -84,8 +85,6 @@ a {
 .header .container nav ul li .btn:hover {
   background: #3ca0be9c;
 }
-
-/* END HEADER */
 
 /*====== INFO =======*/
 section.info {
@@ -109,7 +108,7 @@ section.info .container .title {
   z-index: 2;
   text-align: center;
   width: 90%;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Bold', sans-serif;
   max-width: 600px;
   margin-top: 50px;
 }
@@ -134,7 +133,6 @@ section.info .container img {
   display: flex;
   position: relative;
   margin-bottom: 100px;
-  /* background: #ffffff; */
 }
 
 .main .container .img-left {
@@ -146,7 +144,6 @@ section.info .container img {
 .main .card {
   width: 800px;
   margin: auto;
-  /* height: 400px; */
   background: white;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -189,7 +186,7 @@ section.info .container img {
   font-size: 2.4rem;
   margin-right: 10px;
   justify-content: center;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Bold', sans-serif;
   background: #2a9abd;
   border-radius: 220px;
 }
@@ -213,13 +210,10 @@ section.info .container img {
 }
 
 .main .card .answers .answer:hover {
-  /* border: 2px solid #2a9abd; */
-  /* padding: 9px 10px 9px 19px; */
   background: #2a9abd;
   transition: 0.2s ease-in-out;
   color: white;
   font-weight: bold;
-  /* transition: all 250ms linear 0s; */
 }
 
 .main .card .progress {
@@ -253,22 +247,12 @@ section.info .container img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Bold', sans-serif;
   background: white;
   border-radius: 220px;
   z-index: 20;
   transition: transform 0.2s linear;
 }
-
-/* .main .card .progress .stage.st-1 {
-  background: rgba(2, 74, 97, 0.31);
-  border-radius: 0px 0px 0px 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; */
-/* } */
 
 .st-1 {
   background: #399cbf;
@@ -463,13 +447,10 @@ section.info .container img {
   }
 
   .main .card .answers .answer:hover {
-    /* border: 2px solid #2a9abd; */
-    /* padding: 9px 10px 9px 19px; */
     background: none;
     transition: 0s;
     color: black;
     font-weight: normal;
-    /* transition: all 250ms linear 0s; */
   }
 }
 
@@ -584,16 +565,14 @@ section.info .container img {
     height: 0px;
     top: 0;
     right: 0;
-    /* transform: translateX(0); */
   }
+
   .menu.open {
     position: absolute;
     margin-left: 0px;
     margin-top: 0px;
     top: 0;
     right: 0;
-    /* left: 100%; */
-    /* transform: translateX(-100%); */
     background: #2a9bbdf5;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.333);
     width: 100vw;

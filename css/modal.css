@@ -40,7 +40,7 @@
 .card-modal p {
   font-size: 1.4rem;
   text-align: center;
-  font-family: 'Montserrat-Medium';
+  font-family: 'Montserrat-Medium', sans-serif;
 }
 
 .card-modal form {
@@ -61,7 +61,7 @@
 .card-modal form input[type='submit'] {
   background: #ff9900;
   color: white;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Bold', sans-serif;
   font-size: 1.7rem;
   -webkit-appearance: none !important;
   cursor: pointer;

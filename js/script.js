@@ -2,12 +2,9 @@ const questionTitle = document.querySelector('#question')
 const ball = document.querySelector('#title-ball')
 const divAnswer = document.querySelector('.answers')
 const modal = document.querySelector('.modal')
-const respostas = []
 let resp1 = document.querySelector('#resp_1')
 let resp2 = document.querySelector('#resp_2')
 let resp3 = document.querySelector('#resp_3')
-
-var atual = 0
 
 const st1 = document.querySelector('.st-1')
 
@@ -88,15 +85,6 @@ const change = (question, value) => {
     resp3.value = value
   }
 }
-
-// var traking = window.location.href
-// var pos = traking.indexOf('?')
-// if (pos == -1) {
-//   document.getElementById('traking_id').value = ''
-// } else {
-//   traking = traking.substring(pos, traking.length)
-//   document.getElementById('traking_id').value = traking
-// }
 
 const sendData = () => {
   var link = ''
